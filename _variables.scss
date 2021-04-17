@@ -1,0 +1,23 @@
+$font-family: "Inter", sans-serif;
+$black: #2d3436;
+$purpule:#6c5ce7;
+$gray:#ADADAD;
+$white:#fff;
+
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media(max-width:1125px){ @content;}
+    }
+    @if $point == lg {
+        @media(max-width:992px){ @content;}
+    }
+    @else if $point == md {
+        @media(max-width:768px){ @content;}
+    }
+    @else if $point == sm {
+        @media(max-width:600px){ @content;}
+    }
+    @else if $point == xs {
+        @media(max-width:440px){ @content;}
+    }
+}
